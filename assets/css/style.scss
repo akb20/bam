@@ -1,0 +1,136 @@
+// - - - Import - - - //
+@import 'tools/normalize';
+@import 'tools/vars';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+
+// - - - Base Styles - - - //
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: #f5f5f5;
+}
+
+.wrapper {
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: $green;
+    margin: 1rem 0;
+    transition: all .3s ease-in-out;
+}
+
+header {
+    padding: 100px 0;
+    background: #333;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            opacity: .7;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .title {
+            font-size: 2.2rem;
+            color: #fff;
+            margin: 20px 0 10px 0;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            color: #c7c7c7;
+            margin: 0;
+            span {
+                color: $green;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 100px;
+    .wrapper {
+        .fonts {
+            margin-bottom: 70px;
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                img {
+                    border: 1px solid #c9c5c5;
+                    border-radius: 4px;
+                    margin-bottom: 30px;
+                    -webkit-filter: brightness(.97) grayscale(.7);
+                    transition: all .2s ease-in-out;
+                    &:hover {
+                        -webkit-filter: brightness(1);
+                    }
+                }
+            }
+        }
+        .pics {
+            @extend .fonts;
+            .section-title {
+                color: $blue;
+            }
+        }
+        .colors {
+            @extend .fonts;
+            .section-title {
+                color: $red;
+            }
+        }
+        .ideas {
+            @extend .fonts;
+            .section-title {
+                color: $gray;
+            }
+        }
+        .ext {
+            @extend .fonts;
+            margin-bottom: 200px;
+            .section-title {
+                color: $green;
+            }
+            a {
+                text-align: center;
+                text-decoration: none;
+                width: 180px;
+                color: $green;
+                padding: 10px 15px;
+                margin-bottom: 30px;
+                border: 1px solid $green;
+                border-radius: 4px;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    border: 1px solid #444;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 20px;
+    background-color: #444;
+}
+
+@media screen and (max-width: 720px) {
+    main .wrapper .fonts .row {
+        justify-content: center;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
