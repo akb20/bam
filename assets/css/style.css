@@ -537,6 +537,10 @@ footer {
 
   .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+  
+  main .wrapper .fonts .row img, main .wrapper .pics .row img, main .wrapper .colors .row img, main .wrapper .ideas .row img, main .wrapper .ext .row img {
+  width: 310px;
   }
 }
